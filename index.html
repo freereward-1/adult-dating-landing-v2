@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Real Singles Near You - 18+ Only</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: #ff4d4d;
+      color: white;
+      padding: 20px;
+    }
+    main {
+      padding: 20px;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    .cta-button {
+      background: #ff4d4d;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+    .timer {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      font-size: 12px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meet Real Singles Near You - 18+ Only</h1>
+    <p>Connect Now. Safe, Fast & Private.</p>
+  </header>
+  <main>
+    <img
+      src="https://raw.githubusercontent.com/freereward-1/dating-landing-page/main/assets/Screenshot_20250621_122524_com_google_android_apps_photos_HomeActivity~2.jpg"
+      alt="Singles Nearby"
+      class="hero-image"
+    />
+    <p><strong>Join thousands of singles looking for real connections.</strong></p>
+    <div class="timer">Limited access available! Offer expires in <span id="countdown">02:00</span></div>
+    <button class="cta-button" onclick="window.location.href='https://example.com'">
+      Check Your Matches
+    </button>
+  </main>
+  <footer>
+    <p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a> |
+      <a href="#">Disclaimer</a>
+    </p>
+    <p>This site is for promotional purposes only and is not affiliated with any official dating app. All users must be 18 years or older.</p>
+  </footer>
+  <script>
+    // Countdown timer
+    let seconds = 120;
+    const countdown = document.getElementById('countdown');
+    const interval = setInterval(() => {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      countdown.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      seconds--;
+      if (seconds < 0) clearInterval(interval);
+    }, 1000);
+  </script>
+</body>
+  </html>
